@@ -6,12 +6,15 @@
  */
 //package Shape-RCC;
 
+import java.io.FileReader;
+
 public class FindShapes {
     public static void main(String[] args) {
         Rectangle rec1 = new Rectangle(15,10);
         Square square = new Square(7);
         Circle circle = new Circle(3);
         Rhombus rhombus = new Rhombus(5, 0.5);
+        Trapezoid trapazoid = new Trapezoid(10,16, 8);
         System.out.println("Rectable are is: " + rec1.getArea());
         System.out.println("Square area is: "+ square.getArea());
         System.out.println("The sum can go in either direction!");
@@ -19,9 +22,12 @@ public class FindShapes {
         System.out.println("The sum of the square and rectangle areas is: " + square.addArea(rec1));
         System.out.println("The Circlwe area is: " + circle.getArea());
         System.out.println("The Rhombus area is: " + rhombus.getArea());
+        System.out.println("The Trapazoid area is: " + trapazoid.getArea());
         System.out.println("The circle and retangle areas add to: " + circle.addArea(rec1));
         System.out.println("The Rhombus and Square areas add to: " + rhombus.addArea(square));
         System.out.println("The Rhombus and Cifcle areas add to: " + rhombus.addArea(circle));
+        System.out.println("The Trapazoid and Cifcle areas add to: " + trapazoid.addArea(circle));
+        System.out.println("The Rhombus and Trapazoid areas add to: " + rhombus.addArea(trapazoid));
     }
 
 }
