@@ -7,19 +7,19 @@
 //package Shape-RCC;
 
 public class Rhombus extends Square {
-    private double angle;
+    private double radians;
 
     // Dedine the Constructor
     Rhombus(double side, double angle) {
         super(side);
         if (angle < 0) angle = 0;
-        else if (angle > 1) angle = 1;
-        this.angle = angle;
+        else if (angle > 90) angle = 90;
+        this.radians = Math.toRadians(angle);
     }
 
     // Cannot use the rectangle version, so defines its own getArea()
     double getArea() {
-        return angle * this.height * this.width;
+        return Math.sin(radians) * this.height * this.width;
 
     }
 }
